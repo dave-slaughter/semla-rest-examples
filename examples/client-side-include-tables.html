@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Client Side Include Example</title>
+<style type="text/css">
+table.sl-div, .sl-div th, .sl-div td {
+ border: 1px solid black;
+}
+h2 {
+ color: blue;
+}
+</style>
+</head>
+<body>
+<p><a href="index.html">Back to Examples page</a></p>
+<p>This is an example page which includes the Premier Division table from the South Lacrosse site
+into another page.</p>
+<p>You can style the included HTML to fit your own theme, for example here the division name is 
+changed to blue, and the table has black borders.
+<p>Here is some text before the league tables, followed by a horizontal line.</p>
+<hr/>
+<div id="sl">Loading...
+<noscript>
+<p><b>Javascript must be enabled in order for this page to work correctly.</b></p>
+<p>However, it seems Javascript is either disabled or not supported by your browser. To view the league tables
+enable Javascript by changing your browser options, and then try again.</p>
+</noscript>
+</div>
+<hr/>
+<p>And after the league tables, another horizontal line.</p>
+<script src="http://www.southlacrosse.org.uk/js/clientSideInclude.js"></script>
+<script>clientSideInclude('sl', 'http://www.southlacrosse.org.uk/rest/tables/mens/Prem.html');</script>
+</body>
+</html>
