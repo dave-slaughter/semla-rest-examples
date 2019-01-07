@@ -2,11 +2,22 @@
 <head>
 <title>Client Side Include Example</title>
 <style type="text/css">
-table.sl-div, .sl-div th, .sl-div td {
- border: 1px solid black;
+.sl-div {
+ 	width: 100%;
+ 	border-collapse: collapse;
+ 	text-align: center;
 }
-h2 {
- color: blue;
+.sl-div th, .sl-div td {
+	border: 1px solid black;
+}
+.sl-div th:nth-child(2), .sl-div td:nth-child(2) {
+	text-align: left;
+}
+.sl-div > caption {
+	color: blue;
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.25em;
 }
 </style>
 </head>

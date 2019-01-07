@@ -2,58 +2,26 @@
 
 [Error Codes](Errors.md)
 
-Data is returned as XML by default, or if the extension `xml`, and HTML if the extension is `html`.
+Data is currently only returned as HTML. If you would like a different format please email [webmaster@southlacrosse.org.uk](mailto:webmaster@southlacrosse.org.uk).
 
 ## Request
 
 ### Format 1 - Tables for a club
 
-**URI:** `http://www.southlacrosse.org.uk/rest/clubs/{club-id}/tables[.xml|.html]`
+**URI:** `http://www.southlacrosse.org.uk/rest/clubs/{club-id}/tables.html`
 
 **club-id** is required (see [allowed values](http://www.southlacrosse.org.uk/rest/#clubs)).
 
 ### Format 2 - Tables for a division
 
-**URI:** `http://www.southlacrosse.org.uk/rest/tables/mens/{division}[.xml|.html]`
+**URI:** `http://www.southlacrosse.org.uk/rest/tables/mens/{division}.html`
 
 **division** is required (see [allowed values](http://www.southlacrosse.org.uk/rest/#divisions)).
 
 ### Format 3 - All tables
 
-**URI:** `http://www.southlacrosse.org.uk/rest/tables/mens[.xml|.html]`
+**URI:** `http://www.southlacrosse.org.uk/rest/tables/mens.html`
 
 ## Response Sample
 
-HTML request URI (click to see actual response): [www.southlacrosse.org.uk/rest/tables/mens/Prem.html](http://www.southlacrosse.org.uk/rest/tables/mens/Prem.html)
-
-XML request URI: `http://www.southlacrosse.org.uk/rest/tables/mens/Prem`
-
-XML response data (edited for brevity):
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<league-tables>
-  <division>
-    <division-name short="Prem">Premier Division</division-name>
-    <team>
-      <team-name>Hampstead</team-name>
-      <won>7</won>
-      <drawn>0</drawn>
-      <lost>0</lost>
-      <points>21</points>
-      <for>97</for>
-      <against>47</against>
-    </team>
-    <team>
-      <team-name>Purley</team-name>
-      <won>6</won>
-      <drawn>0</drawn>
-      <lost>2</lost>
-      <points>20</points>
-      <for>103</for>
-      <against>45</against>
-    </team>
-    ...(more teams)
-  </division>
-</league-tables>
-```
+Request URI (click to see actual response): [www.southlacrosse.org.uk/rest/tables/mens/Prem.html](http://www.southlacrosse.org.uk/rest/tables/mens/Prem.html)

@@ -44,17 +44,23 @@ $httpCache->fetch();
 <head>
 <title>SEMLA Tables example using PHP</title>
 <style>
-table {
+.sl-div {
  	text-align: center;
  	width: 100%;
  	border-collapse: collapse;
+ 	margin-top: 2em;
 }
-th, td {
+.sl-div > caption {
+	text-align: left;
+	font-weight: bold;
+	font-size: 1.25em;
+}
+.sl-div th, .sl-div td {
 	padding: 5px 0.75em;
 	vertical-align: top;
 	border: 1px solid #000;
 }
-th {
+.sl-div th {
 	background-color: #eee;
 }
 </style>

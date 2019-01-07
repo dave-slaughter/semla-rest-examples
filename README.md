@@ -30,7 +30,7 @@ You can also run the Client Side Includes example by simply opening the `client-
 
 We publish resources at specified URIs, and currently data is available in both XML and HTML formats. The default format is XML, which is returned if the extension is omitted or `xml`, and gives the maximum flexibility for processing on the client. HTML is returned if the extension is `html`, and is the the easiest format to include in another web page.
 
-For example the league tables are at [www.southlacrosse.org.uk/rest/tables/mens](http://www.southlacrosse.org.uk/rest/tables/mens) for the default XML format, or at [www.southlacrosse.org.uk/rest/tables/mens.html](http://www.southlacrosse.org.uk/rest/tables/mens.html) for an HTML version.
+For example the league tables are at [www.southlacrosse.org.uk/rest/tables/mens.html](http://www.southlacrosse.org.uk/rest/tables/mens.html).
 
 **Please note:** for historic reasons many resources have `mens` as part of the URI. This is because the site originally contained data for both men's and women's leagues.
 
@@ -38,11 +38,9 @@ Clients (which can be other servers, web browsers, or any other computer program
 
 Clients will typically use these resources to build part of a web page on a different site, using either [Server Side Includes (SSI)](#server-side-includes-ssi) or [Client Side Includes (CSI)](#client-side-includes-csi).
 
-### HTML or XML
+### Response Format
 
-If you are just going to include our data in your own web page then the simplest way is to use the HTML format, and include the resource directly in your page. In order to see how the HTML is formatted you can simply enter the resource URI into a web browser to view the page output, and "view source" to see the exact HTML. You can then style the output using CSS (if required, surround the included HTML with a `<div>` tag with an `id` or `class` to reference it directly).
-
-If you want to provide your own HTML formatting, or for more complicated processing, then using the XML format will be best.
+Data is currently only returned as HTML. If you would like a different format please email [webmaster@southlacrosse.org.uk](mailto:webmaster@southlacrosse.org.uk).
 
 ### Server Side Includes (SSI)
 
@@ -61,12 +59,12 @@ Sample code of how to do this is in the [examples folder](examples).
 
 ### Client Side Includes (CSI)
 
-If at all possible, it is recommended to use [Server Side Includes](#server-side-includes-ssi), the main reasons being:
+It is recommended to use [Server Side Includes](#server-side-includes-ssi), the main reasons being:
 
 *   Browsers may not have Javascript enabled, either because the device does not support it, or because the user has turned it off for security reasons, etc.
 *   Search engines can't see content that is added with Javascript, so the included part of your page won't be indexed.
 
-However, if you have no other way of including data from our site, then CSI can come to the rescue. A typical interaction is detailed below:
+However, CSI can be useful in many scenarios, for example switching between fixtures for individual teams in a club on one page. A typical interaction is detailed below:
 
 ![REST CSI request flow](rest-client-side.png)
 
